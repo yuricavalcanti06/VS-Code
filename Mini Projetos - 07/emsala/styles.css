@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'madimi';
+    src: url(../emsala/fonts/MadimiOne-Regular.ttf);
+}
+p{
+    color: aqua;
+    font-size: large;
+    font-family: madimi;
+}
+#titulo{
+    font-family: madimi;
+}

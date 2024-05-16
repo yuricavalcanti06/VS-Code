@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/parte 1.css">
+    <title>Parte 1</title>
+</head>
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="container">
+    <img src="/bola.png" alt="Bola de Cristal">
+    <h1>Jogo de Adivinhação de Números</h1>
+    <p>Tente adivinhar o número secreto entre 1 e 50. Você tem 3 tentativas.</p>
+
+    <input type="number" placeholder="Insira aqui o número" id="guessInput" min="1" max="50">
+    <button id="guessButton">Tentar</button>
+
+    <p id="resultado"></p>
+    <button id="restartButton" style="display: none;">Reiniciar o jogo</button>
+</div>
+
+<script>
+var secretNumber = Math.floor(Math.random() * 50) + 1;
+var attempts = 3;
+
+document.getElementById("guessButton").addEventListener("click", function() {
+    var guess = document.getElementById("guessInput").value;
+    if (guess == secretNumber) {
+        document.getElementById("resultado").innerHTML = "Parabéns! Você acertou o número secreto " + secretNumber;
+        document.getElementById("restartButton").style.display = "block";
+    } else if (guess < secretNumber) {
+        attempts--;
+        alert("O número secreto é maior! Tentativas restantes: " + attempts);
+    } else if (guess > secretNumber) {
+        attempts--;
+        alert("O número secreto é menor! Tentativas restantes: " + attempts);
+    }
+    if (attempts == 0) {
+        document.getElementById("resultado").innerHTML = "Você não conseguiu adivinhar o número secreto. O número era " + secretNumber;
+        document.getElementById("restartButton").style.display = "block";
+    }
+});
+
+document.getElementById("restartButton").addEventListener("click", function() {
+    secretNumber = Math.floor(Math.random() * 50) + 1;
+    attempts = 3;
+    document.getElementById("guessInput").value = "";
+    document.getElementById("resultado").innerHTML = "";
+    this.style.display = "none";
+});
+</script>
+
+</html>

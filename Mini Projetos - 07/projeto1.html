@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 1</title>
+</head>
+<body>
+    <h1>Cadastro de Pessoas Desenvolvedoras</h1>
+    <form id="Dados Pessoais">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+        <label>Nome <input type="text" placeholder="Digite seu nome" required></label>
+        <label>Sobrenome <input type="text" placeholder="Digite seu sobrenome" required></label><br><br>
+        <label>Email <input type="email" placeholder="Digite seu email" required></label>
+        </fieldset>
+        <fieldset>
+            <legend>Senioridade </legend>
+            <label>Senioridade</label>
+            <select name="Senioridade" id="Senioridade">
+                <option value="Junior">Junior</option>
+                <option value="Pleno">Pleno</option>
+                <option value="Senior">Sênior</option>
+            </select>
+            <br>
+            <label>Selecione as tecnologias que utiliza:</label><br><br>
+            <input type="checkbox" name="tecnologias" value="html">
+            <label>HTML</label>
+            <input type="checkbox" name="tecnologias" value="css">
+            <label>CSS</label>
+            <input type="checkbox" name="tecnologias" value="javascript">
+            <label>JavaScript</label>
+            <input type="checkbox" name="tecnologias" value="php">
+            <label>PHP</label>
+            <input type="checkbox" name="tecnologias" value="c#">
+            <label>C#</label>
+            <input type="checkbox" name="tecnologias" value="python">
+            <label>Python</label>
+            <input type="checkbox" name="tecnologias" value="java">
+            <label>Java</label><br>
+            <label>Conte um pouco da sua experiência:</label><br>
+            <textarea name="experiencia" id="experiencia" cols="40" rows="5" placeholder="Sua experiência" required></textarea>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
